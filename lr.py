@@ -109,8 +109,6 @@ def test_work():
         assert False, "Создание модели завершается с ошибкой"
         return
 
-    # clf = clf.fit(X, y)
-
     try:
         clf = clf.fit(X, y)
     except Exception:
