@@ -51,7 +51,7 @@ class LR(ClassifierMixin, BaseEstimator):
         Обучение логистической регрессии.
         Настраивает self.w коэффициенты модели.
 
-        Если self.verbose == True, то выводите значение 
+        Если self.verbose == True, то выводит значение 
         функции потерь на итерациях метода оптимизации. 
 
         :param X: numpy.array размера  (N, M), dtype = np.float
@@ -76,8 +76,8 @@ class LR(ClassifierMixin, BaseEstimator):
         :param X: numpy.array размера  (N, M), dtype = np.float
         :return: numpy.array размера  (N,), dtype = np.int
         """
-        # Вычислите вероятности принадлежности каждого 
-        # объекта из X к положительному классу, используйте
+        # Вычисляем вероятности принадлежности каждого 
+        # объекта из X к положительному классу, используем
         # эту функцию для реализации LR.predict
         probs = special.expit(X.dot(self.w))
         return probs
@@ -90,7 +90,7 @@ class LR(ClassifierMixin, BaseEstimator):
         :param X: numpy.array размера  (N, M), dtype = np.float
         :return:  numpy.array размера  (N,), dtype = np.int
         """
-        # Вычислите предсказания для каждого объекта из X
+        # Вычисляем предсказания для каждого объекта из X
         predicts = np.where(self.predict_proba(X) > 0.5, 1, -1)
         return predicts 
 
