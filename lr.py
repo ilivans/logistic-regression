@@ -5,9 +5,6 @@ from scipy import special
 from sklearn.base import ClassifierMixin, BaseEstimator
 from sklearn.datasets import make_classification
 
-# Используйте scipy.special для вычисления численно неустойчивых функций
-# https://docs.scipy.org/doc/scipy/reference/special.html#module-scipy.special
-
 
 def lossf(w, X, y, l1, l2):
     """
